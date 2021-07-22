@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Projeto com componentes</title>
@@ -18,6 +19,26 @@
 			
 			<h:outputLabel value="Observação"/>
 			<h:inputTextarea cols="30" rows="5"/>
+			
+			<h:outputLabel value="Interesses: "/>
+			<h:selectManyCheckbox>
+				<f:selectItem itemValue="V" itemLabel="Viagem"/>
+				<f:selectItem itemValue="C" itemLabel="Cinema"/>
+				<f:selectItem itemValue="I" itemLabel="Internet"/>
+			</h:selectManyCheckbox>
+			
+			<h:outputLabel value="Estado Civil: "/>
+			<h:selectOneRadio>
+				<f:selectItem itemValue="S" itemLabel="Solteiro"/>
+				<f:selectItem itemValue="C" itemLabel="Casado"/>
+				<f:selectItem itemValue="D" itemLabel="divorciado"/>
+			</h:selectOneRadio>
+			
+			<h:outputLabel value="UF: "/>
+			<h:selectOneMenu>
+				<f:selectItem itemValue="RJ" itemLabel="Rio de Janeiro"/>
+				<f:selectItem itemValue="SP" itemLabel="São Paulo"/>
+			</h:selectOneMenu>
 		</h:panelGrid>
 		
 		<h:panelGrid columns="4">
